@@ -1,0 +1,22 @@
+[package]
+name = "gba3d"
+version = "0.1.0"
+authors = ["xokz"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+agb = "0.17.0"
+
+[profile.dev]
+opt-level = 3
+debug = true
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+debug = true
+
+[patch.crates-io]
+agb = {path = "/home/xokz/.rhack/agb-0.17.0"}
